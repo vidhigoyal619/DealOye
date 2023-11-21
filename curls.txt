@@ -1,0 +1,7 @@
+curl --location --request POST 'http://localhost:3001/abc/api/userRegister' \
+--header 'Content-Type: application/json' \
+--data-raw '{    "username" : "Soni",
+    "email_id" : "soni.rathore2003@gmail.com",
+    "password" :"anee12345",
+   "repeat_password":"anee12345"
+}'

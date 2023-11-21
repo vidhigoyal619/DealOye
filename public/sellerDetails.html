@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Details | Dealoye</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #edeffd;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    max-height: 40px; 
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    float: right;
+    font: inherit;
+    vertical-align: baseline;
+}
+.nav-links ul{
+    margin: 0;
+    list-style: none;
+}
+.nav-links ul li:first-child {
+    margin-left: 0;
+}
+.nav-links ul li {
+    float: left;
+    display: block;
+    margin-left: 2em;
+    line-height: 36px;
+
+}
+.btn{
+    background-color: #3a4cea;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero {
+    background-color: #3a4cea;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 45px;
+    line-height: 95px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0  40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+p{
+    margin-left: 1rem;
+    width: 80%;
+    text-align: justify;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    }
+
+.para{
+    text-align: center;
+    justify-content: center;
+    margin-left: 10rem;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #252b60;
+    padding-top: 30px;
+}
+footer {
+    background-color: #252b60;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Back button */
+.back-button {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 6px 20px; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s; 
+}
+
+.back-button:hover {
+    background-color: #0056b3; 
+}
+
+/* Chat with Seller button */
+.chat-button {
+    background-color: #007bff; 
+    color: #fff; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 6px 20px; 
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s; 
+}
+
+.chat-button:hover {
+    background-color: #2c39a3; 
+}
+/* Mobile-first styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 10px;
+    }
+    .our-webcoderskull .cnt-block {
+        height: auto;
+        padding: 15px;
+    }
+    footer{
+        margin-left: -2rem;
+    }
+    p{
+    margin-left: 1rem;
+    width: 80%;
+    text-align: justify;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    }
+    .para{
+       text-align: center;
+       margin-left: 3.3rem;
+    }
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 50px;
+        margin: 0 40px;
+    }
+    .our-webcoderskull .cnt-block {
+        height: 349px;
+        padding: 30px 20px;
+    }
+
+    .footer-links ul {
+        text-align: right;
+    }
+
+    .footer-links li {
+        display: inline;
+        margin: 0 20px;
+    }
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    padding: 5px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.menu-open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menu-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #dfe2ff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        float: right;
+    }
+    .btn{
+        background-color: #dfe2ff;
+    }
+    .btn a{
+        color: #3a4cea;
+        font-weight: 800;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo"><img src="images/DealOye (5).png" alt="DealOye Logo"></div>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><Button class="btn"><a href="home.html">Home</Button></a></li>
+                    <li><Button class="btn"><a href="contact.html">Contact</Button></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+    <div class="seller-details">
+        <h1>Seller Details</h1>
+    </section>
+        <p id="seller-details-content">Loading seller details...</p>
+    </div>
+    <button id="back-button" class="back-button">&larr; Back</button>
+    <a href="chat.html"><button class="chat-button" title="Chat with Seller">
+        <i class="fa fa-comment">  Chat</i>
+    </button></a>
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
+        <p class="para">&copy; 2023 DealOye. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to get the query parameter by name
+function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Retrieve the product ID from the query parameter
+const productId = getQueryParam('product');
+
+// Fetch and display seller details based on the product ID
+const sellerDetailsContent = document.getElementById('seller-details-content');
+
+// Example: You can use a simple map to store seller details based on the product ID
+const sellerDetailsMap = {
+    product1: {
+        name: 'John Doe',
+        email: 'johndoe@xyz.com',
+        contact: '1234567890',
+        productName: 'Acropolis Files',
+        price: 'Rs 15',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product2: {
+        name: 'Michael Brown',
+        email: 'michaelbrown@mail.com',
+        contact: '5556667777',
+        productName: 'Acropolis Pages',
+        price: 'Rs 35',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product3: {
+        name: 'Olivia Smith',
+        email: 'oliviasmith@server.com',
+        contact: '3334445555',
+        productName: 'Artificial Intelligence Book',
+        price: 'Rs 500',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product4: {
+        name: 'Alice Smith',
+        email: 'alicesmith@abc.com',
+        contact: '9876543210',
+        productName: 'Belts',
+        price: 'Rs 75',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product5: {
+        name: 'Bob Johnson',
+        email: 'bjohnson@domain.com',
+        contact: '5551112233',
+        productName: 'Geometry Box',
+        price: 'Rs 50',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product6: {
+        name: 'Charlie Brown',
+        email: 'cbrown@site.com',
+        contact: '7773336666',
+        productName: 'Cellotape',
+        price: 'Rs 15',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product7: {
+        name: 'Emma White',
+        email: 'ewhite@web.com',
+        contact: '1110009999',
+        productName: 'Engineering Drawing Clips',
+        price: 'Rs 10',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product8: {
+        name: 'David Lee',
+        email: 'davidlee@host.com',
+        contact: '4442221111',
+        productName: 'Engineering Drawing Clips',
+        price: 'Rs 10',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product9: {
+        name: 'Grace Turner',
+        email: 'graceturner@webmail.com',
+        contact: '2225554444',
+        productName: 'Cover Roll(Good Quality)',
+        price: 'Rs 30',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    product10: {
+        name: 'Frank Harris',
+        email: 'frankharris@provider.com',
+        contact: '8889990000',
+        productName: 'Cover Roll',
+        price: 'Rs 25',
+        availability: 'In Stock',
+        desciption: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    }
+};
+if (sellerDetailsMap[productId]) {
+    const sellerDetails = sellerDetailsMap[productId];
+    sellerDetailsContent.innerHTML = `
+        <p><strong>Name:</strong> ${sellerDetails.name}</p>
+        <p><strong>Eamil:</strong> ${sellerDetails.email}</p>
+        <p><strong>Contact:</strong> ${sellerDetails.contact}</p>
+        <p><strong>Product Name:</strong> ${sellerDetails.productName}</p>
+        <p><strong>Price:</strong> ${sellerDetails.price}</p>
+        <p><strong>Availability:</strong> ${sellerDetails.availability}</p>
+        <p><strong>Description:</strong> ${sellerDetails.desciption}</p>
+    `;
+} else {
+    sellerDetailsContent.innerHTML = '<p>No seller details found for this product.</p>';
+}
+
+// code for back button
+function goBack() {
+      window.history.back();
+    }
+
+    // Add an event listener to the back button
+    const backButton = document.getElementById('back-button');
+    if (backButton) {
+      backButton.addEventListener('click', goBack);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+const mysql=require('mysql2');
+var var1=mysql.createConnection({ 
+    host:'localhost',
+    user:'root',
+    password :"",
+    port: '3308',
+      database :'it' 
+  });
+
+  var1.connect(function(error){
+    if(error) throw error;
+    console.log("connect");
+});
+  module.exports=var1;
+  

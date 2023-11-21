@@ -1,0 +1,44 @@
+<% if (buy.length> 0) {  %>
+    <% for( var i = 1; i < buy.length; i++ ) { %>
+
+<div class="product" data-category="Clips">
+    <img src="images/clips 1.jpg" alt="clips" class="product-image">
+    <h3><%- buy[i].title %> </h3>
+    <p>Expected Price: <%- buy[i]. price %></p>
+    <p>Availability: In Stock</p>
+    <p>Description: <%- buy[i]. description %> </p>
+     <div class="product-buttons">
+        <a href="chat.html"><button class="chat-button" title="Chat with Seller">
+            <i class="fa fa-comment"></i>
+        </button></a>
+        <a href="sellerDetails.html"><button class="seller-details-button" title="Seller Details" data-product-id="product7">
+            <i class="fa fa-user"></i>
+        </button></a>
+        <a href="cart.html"><button class="add-to-cart-button" title="Add to Cart">
+            <i class="fa fa-shopping-cart"></i>
+        </button></a>
+</div>
+  </div>
+  <% } %>
+  <% } else {%> 
+    <h1>data not found</h1>
+    <% } %>
+
+
+
+    <% if (buy.length> 0) {  %>
+        <section class="product-grid">
+            <% for( var i = 1; i < buy.length; i++ ) { %>
+            <div class="product"  style=" height:  250px; width: 200px; border:  1px solid; margin-top: 25px;" >
+              <img  alt="Embedded image" src=" data:image/png;base64, <%= buy[i].image %>">
+              <h4>Product <%- i %> </h4>
+              <h4>Title :</h4> <%- buy[i].title %> 
+              <p>Expected Price: <%- buy[i]. price %></p>
+              <p>Availability: In Stock</p>
+              <p>Description: <%- buy[i]. description %> </p>
+            </div>
+            <% } %>
+        </section>
+            <% } else {%> 
+                <h1>data not found</h1>
+                <% } %>

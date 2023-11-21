@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealOye OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .content {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .otp-code {
+            font-size: 48px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .instructions {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #888;
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DealOye OTP Verification</h1>
+        </div>
+        <div class="content">
+            <p>Your OTP (One-Time Password) for verification is:</p>
+            <p class="otp-code">{{otp_code}}</p>
+            <p class="instructions">Please use this OTP to complete your registration or login process.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 DealOye. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

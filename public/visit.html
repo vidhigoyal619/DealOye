@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup | DealOye</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <script src="https://kit.fontawesome.com/e8ed8c271f.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+/* login section css */
+.login-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,50,0.8), rgba(0,0,50,0.8)) ,url('images/college-image.jpeg');
+}
+
+/* Your Login/Signup Form CSS Goes Here */
+.form-box{
+  width: 90%;
+  max-width: 450px;
+  max-height: max-content;
+  top: 50%;
+  left: 50%;
+  background: #FFF;
+  padding: 10px 60px 70px;
+  text-align: center;
+}
+.form-box h1{
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #3c00a0;
+  position: relative;
+}
+.input-field{
+  background: #eaeaea;
+  margin: 13px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+input{
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border:none;
+  padding: 18px 15px;
+}
+.input-field i{
+  margin-left: 15px;
+  color: #9999;
+}
+form p{
+  text-align: left;
+  font-size: 13px;
+}
+form p a{
+  text-decoration: none;
+  color: #3c00a0;
+}
+.btn-field{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-field button{
+  flex-basis: 48%;
+  background: #3c00a0;
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.btn-field button a{
+  color: #FFF;
+  text-decoration: none;
+}
+.input-group{
+  height: 380px;
+}
+.btn-field button.disable{
+  background: #eaeaea;
+  color: #3c00a0;
+}
+footer {
+    background-color: #252b60;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+/* Mobile-first styles */
+@media (max-width: 768px) {
+    footer{
+        margin-left: -2rem;
+    }
+    p{
+        margin-left: 1rem;
+    }
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Tablet and larger screens styles (you can adjust the breakpoint as needed) */
+@media (min-width: 768px) {
+    .footer-links ul {
+        text-align: right;
+    }
+
+    .footer-links li {
+        display: inline;
+        margin: 0 20px;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <!-- First Section: Login/Signup Form with Transparent Background Image -->
+  <section class="login-section" id="login-section">
+   <div class="form-box">
+    <h1 id="title">Sign Up</h1>
+    <form action="/abc/api/userRegister" method="POST">
+        <div class="input-group">
+            <div class="input-field" id="name-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-field" id="email-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email_id" placeholder="youremail@gmail.com" required>
+            </div>
+            <div class="input-field" id="phone-field">
+                <i class="fa-solid fa-phone"></i>
+                <input type="number" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="input-field" id="password-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-field" id="confirm-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="repeat_password" placeholder="Confirm Password" required>
+            </div>
+            <p>Remember your password?<a href="./forgot.html">Forgot Password</a></p>
+        </div>
+        <div class="btn-field">
+            <button id="signupbtn" type="submit">Sign Up</button>
+            <!-- <button id="loginbtn" type="submit" >  <a href="./login.html">login</a></button> -->
+       <!--  <button type="button" class="disable" id="loginbtn"><a href="./login.html">Login</a></button> -->
+        </div>
+    </form>
+   </div>
+  </section>
+
+  <!-- Last Section: Footer -->
+  <footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="termsOfService.html">Terms of Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2023 DealOye. All rights reserved.</p>
+</footer>
+<!-- js file  -->
+  <script src="script.js">
+
+</script>
+</body>
+</html>
